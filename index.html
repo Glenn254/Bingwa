@@ -3,57 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMM Panel</title>
+  <title>Crispin Data Offers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>💎 Glenn SMM Panel</h1>
-  </header>
+  <div class="container">
+    <h2 class="title">Crispin Data Purchase</h2>
 
-  <section class="dashboard">
-    <div class="card">
-      <h3>Total Orders</h3>
-      <p id="ordersCount">0</p>
-    </div>
-    <div class="card">
-      <h3>Completed</h3>
-      <p id="completedCount">0</p>
-    </div>
-    <div class="card">
-      <h3>Pending</h3>
-      <p id="pendingCount">0</p>
-    </div>
-  </section>
+    <div id="offers" class="offers"></div>
+  </div>
 
-  <section class="new-order">
-    <h2>Place New Order</h2>
-    <form id="orderForm">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="number" id="quantity" placeholder="Quantity" required />
-      <select id="service">
-        <option value="followers">Followers</option>
-        <option value="likes">Likes</option>
-        <option value="views">Views</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+  <!-- Popup -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h3>Purchase Option</h3>
+      <div class="options">
+        <label>
+          <input type="radio" name="option" value="my" checked />
+          Buy for my number
+        </label>
+        <label>
+          <input type="radio" name="option" value="other" />
+          Buy for other number
+        </label>
+      </div>
+      <input type="text" id="phoneNumber" placeholder="Enter number (if other)" />
+      <p class="info">
+        Navigate to <strong>Mpesa → Lipa na Mpesa → Buy Goods and Services</strong>  
+        and use Till <strong>6975729</strong> to complete your purchase.
+      </p>
+      <p class="note">
+        <strong>NB:</strong> Data is executed instantly after successful purchase without delays.
+      </p>
+      <div class="popup-buttons">
+        <button id="cancelBtn">Cancel</button>
+        <button id="purchaseBtn">Purchase</button>
+      </div>
+    </div>
+  </div>
 
-  <section class="orders-list">
-    <h2>Recent Orders</h2>
-    <table id="ordersTable">
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Service</th>
-          <th>Quantity</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </section>
+  <div class="help-section">
+    <p>Need help? Visit our WhatsApp Channel:</p>
+    <a href="https://whatsapp.com/channel/0029Vb6XAv0GOj9lYT2p3l1X" class="whatsapp-btn" target="_blank">
+      Open WhatsApp Channel
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>
